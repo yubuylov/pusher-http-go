@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-var pusherPathRegex = regexp.MustCompile("^/apps/([0-9]+)$")
+var pusherPathRegex = regexp.MustCompile("^/apps/(.*)$")
 
 /*
 Client to the HTTP API of Pusher.
