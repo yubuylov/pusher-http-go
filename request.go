@@ -30,7 +30,7 @@ func processResponse(response *http.Response) ([]byte, error) {
 	}
 
 	// 2xx
-	if response.StatusCode > 200 && response.StatusCode < 300 {
+	if response.StatusCode >= 200 && response.StatusCode < 300 {
 		return responseBody, nil
 	}
 	message := fmt.Sprintf("Status Code: %s - %s", strconv.Itoa(response.StatusCode), string(responseBody))
